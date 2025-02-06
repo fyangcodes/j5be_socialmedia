@@ -31,13 +31,18 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # at very first to overwrite the default template
     "account.apps.AccountConfig",
+    # django built-in
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    # thir party
+    "social_django",
+
 ]
 
 MIDDLEWARE = [
@@ -137,7 +142,7 @@ MEDIA_ROOT = BASE_DIR / "media"
 
 # Authentication backend
 AUTHENTICATION_BACKENDS = [
-    # "django.contrib.auth.backends.ModelBackend",
+    "django.contrib.auth.backends.ModelBackend",
     "account.authentication.EmailAuthBackend",
     # "social_core.backends.google.GoogleOAuth2",
 ]
