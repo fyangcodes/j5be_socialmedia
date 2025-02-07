@@ -4,3 +4,4 @@
 pg
 env
 cert*
+db.sqlite3
