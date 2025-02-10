@@ -5,3 +5,4 @@ pg
 env
 cert*
 db.sqlite3
+media
