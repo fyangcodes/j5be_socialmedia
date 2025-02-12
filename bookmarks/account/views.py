@@ -117,7 +117,7 @@ def dashboard(request):
     return render(
         request,
         "account/dashboard.html",
-        {"section": "dashboard"},
+        {"section": "dashboard", "actions": actions},
     )
 
 
